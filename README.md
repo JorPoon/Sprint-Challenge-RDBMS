@@ -46,6 +46,8 @@ If you have fried chicken recipe and you want the recipe to connec to fried chic
 
 1. What do we need in order to have a _many to many_ relationship between two tables.
 
+We will need a third table that connects the ids of the two table.
+
 ## Project Set Up
 
 Follow these steps for starting your project.
