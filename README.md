@@ -41,6 +41,9 @@ RDBMS is the basis of data modeling that allows us to interact with relational d
 Tables need a primary key in order to have a connection to define each row. In allows the data to be unique and specific.
 
 1. What is the name given to a table column that references the primary key on another table.
+
+If you have fried chicken recipe and you want the recipe to connec to fried chicken on the dish table. In the fried chicken recipe, You will need a dish_Id (not the primary key of the recipe table) to reference the primary key of the dish table.
+
 1. What do we need in order to have a _many to many_ relationship between two tables.
 
 ## Project Set Up
