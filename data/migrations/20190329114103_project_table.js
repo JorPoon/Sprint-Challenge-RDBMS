@@ -21,7 +21,7 @@ exports.up = function(knex, Promise) {
         tbl
          .boolean('completed');
   })
-  .createdTable('actions', tbl => {
+  .createTable('actions', tbl => {
       //primary key , auto increments
       tbl.increments();
 
