@@ -26,4 +26,15 @@ router.post('/', async (req, res) => {
     }
 })
 
+router.get('/:id/actions', async (req,res) => {
+    try {
+        const actions = await Projects.getProjectActions(req.params.id);
+        res.status(200).json(actions)
+    } catch (error) {
+        res.status(500).json({
+            message: 'Error getting actions for projects'
+        })
+    }
+})
+
 module.exports = router;
