@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js",
-    "server": "nodemon"
+    "server": "nodemon index.js"
   },
   "repository": "https://github.com/JorPoon/Sprint-Challenge-RDBMS.git",
   "author": "Jor_Poon <jormpoon@gmail.com>",
