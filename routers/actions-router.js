@@ -15,6 +15,7 @@ router.get('/', async (req, res) => {
     }
 })
 
+
 router.post('/', async (req, res) => {
     try {
         const addAction = await Actions.addAction(req.body)

@@ -1,6 +1,7 @@
 const router = require('express').Router();
 
 const Projects = require('../data/helpers/projectDb');
+const Actions = require('../data/helpers/actionDb');
 
 
 
@@ -26,10 +27,12 @@ router.post('/', async (req, res) => {
     }
 })
 
-router.get('/:id/actions', async (req,res) => {
+router.get('/:id', async (req,res) => {
+    const id = req.params.id;
     try {
-        const actions = await Projects.getProjectActions(req.params.id);
-        res.status(200).json(actions)
+        const project = await Projects.getProjects().where({id})
+        const actions = await Actions.getActions().where({project_id: id})
+        res.status(200).json({...project[0], action:[...actions]})
     } catch (error) {
         res.status(500).json({
             message: 'Error getting actions for projects'
