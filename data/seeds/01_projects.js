@@ -1,6 +1,6 @@
 
 exports.seed = function(knex, Promise) {
-  return knex('table_name').insert([
+  return knex('projects').insert([
   {
     name: 'WebDB guided/challenge', 
     description: '1 week of learning Relational Databases',
